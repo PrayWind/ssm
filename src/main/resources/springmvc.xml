@@ -27,6 +27,18 @@
         <property name="suffix" value=".jsp"/>
     </bean>
 
+    <!-- 配置拦截器 -->
+    <!-- <mvc:interceptors> -->
+    <!-- 多个拦截器的执行顺序 -->
+    <!-- <mvc:interceptor>
+        <mvc:mapping path="/**" />
+        <bean class="com.xmut.intercept.HandlerIntercept"></bean>
+        </mvc:interceptor>
+    </mvc:interceptors> -->
+
+    <!-- 解决使用@ResponseBody 的中文乱码。 -->
+    <bean class="com.xmut.utils.UTF8StringBeanPostProcessor"/>
+
     <!--过滤静态资源-->
     <mvc:resources location="/css/" mapping="/css/**" />
     <mvc:resources location="/images/" mapping="/images/**" />
