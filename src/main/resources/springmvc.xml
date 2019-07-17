@@ -44,6 +44,6 @@
     <mvc:resources location="/images/" mapping="/images/**" />
     <mvc:resources location="/js/" mapping="/js/**" />
 
-    <!--开启springmvc注解的支持-->
+    <!--开启springmvc注解的支持，@RequestMapping注解生效-->
     <mvc:annotation-driven/>
 </beans>

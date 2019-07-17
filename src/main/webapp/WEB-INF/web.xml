@@ -14,7 +14,7 @@
   -->
 
 
-  <!--1. 解决中文乱码过滤器-->
+  <!--1. 解决POST请求中文乱码过滤器，如果是GET请求则在tomcat的server.xml配置文件中配置URIEncoding-->
   <filter>
     <filter-name>characterEncodingFilter</filter-name>
     <filter-class>org.springframework.web.filter.CharacterEncodingFilter</filter-class>
@@ -29,7 +29,7 @@
     <url-pattern>/*</url-pattern>
   </filter-mapping>
 
-  <!--2. 配置spring的监听器，目的是加载spring的配置文件，默认只加载WEB-INF目录下的applicationContext.xml配置文件-->
+  <!--2. 配置spring的监听器，目的是加载spring的配置文件，默认只加载WEB-INF目录下的spring-mybatis.xml配置文件-->
   <listener>
     <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
   </listener>
