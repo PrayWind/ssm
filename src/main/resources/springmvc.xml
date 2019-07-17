@@ -44,6 +44,7 @@
     <mvc:resources location="/images/" mapping="/images/**" />
     <mvc:resources location="/js/" mapping="/js/**" />
 
-    <!--开启springmvc注解的支持，@RequestMapping注解生效-->
+    <!-- 开启springmvc注解的支持，@RequestMapping注解生效
+         这个注解会自动配置上处理器映射器和处理器适配器 -->
     <mvc:annotation-driven/>
 </beans>
